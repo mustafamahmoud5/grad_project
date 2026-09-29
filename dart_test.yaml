@@ -1,0 +1,4 @@
+tags:
+  # Hits the real YTS API. Run with: flutter test --run-skipped -t live
+  live:
+    skip: "Live API test. Run with: flutter test --run-skipped -t live"

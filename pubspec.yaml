@@ -1,0 +1,65 @@
+name: grad_project
+description: "Movies App - Flutter graduation project powered by the YTS API and Firebase."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+
+  dio: ^5.9.0
+  connectivity_plus: ^7.0.0
+
+  get_it: ^8.2.0
+
+  firebase_core: ^4.15.0
+  firebase_auth: ^6.7.0
+  cloud_firestore: ^6.10.0
+  google_sign_in: ^7.2.0
+
+  shared_preferences: ^2.5.3
+
+  cached_network_image: ^3.4.1
+
+  shimmer: ^3.0.0
+
+  carousel_slider: ^5.1.1
+
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/onboarding/
+    - assets/logos/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+          weight: 800

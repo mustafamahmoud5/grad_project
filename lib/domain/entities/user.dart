@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-/// The signed-in user of the app (named `AppUser` to avoid clashing with
-/// Firebase's `User`).
 class AppUser extends Equatable {
   const AppUser({
     required this.id,
@@ -18,7 +16,6 @@ class AppUser extends Equatable {
   final String phone;
   final int avatarIndex;
 
-  /// Photo from a social provider (e.g. Google), used when present.
   final String? photoUrl;
 
   String get displayName => name.isNotEmpty

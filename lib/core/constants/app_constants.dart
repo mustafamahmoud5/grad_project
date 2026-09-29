@@ -1,7 +1,6 @@
 abstract final class AppConstants {
   static const appName = 'Movies App';
 
-  /// Genres supported by the YTS `genre` filter.
   static const genres = [
     'Action',
     'Adventure',
@@ -28,7 +27,6 @@ abstract final class AppConstants {
 
   static const defaultGenre = 'Action';
 
-  /// Genre rows shown on the Home screen.
   static const homeGenres = ['Action', 'Adventure', 'Animation', 'Comedy'];
 
   static const searchDebounce = Duration(milliseconds: 500);

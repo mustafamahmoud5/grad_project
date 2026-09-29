@@ -16,7 +16,6 @@ import '../widgets/home_section.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.onSeeMore});
 
-  /// Opens the Browse tab filtered by the given genre.
   final ValueChanged<String> onSeeMore;
 
   @override
@@ -91,7 +90,6 @@ class _HomeContent extends StatelessWidget {
   }
 }
 
-/// The selected carousel poster, blurred and faded into the background.
 class _BlurredBackdrop extends StatelessWidget {
   const _BlurredBackdrop({required this.url});
 
@@ -127,7 +125,6 @@ class _BlurredBackdrop extends StatelessWidget {
   );
 }
 
-/// Large headline that fades out towards the bottom, like the design.
 class _FadedTitle extends StatelessWidget {
   const _FadedTitle(this.text);
 

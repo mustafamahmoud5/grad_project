@@ -27,14 +27,12 @@ class MovieDetails extends Movie {
   final int likeCount;
   final String description;
 
-  /// YouTube video id of the trailer, if any.
   final String? trailerCode;
   final String? language;
   final String? mpaRating;
   final List<String> screenshots;
   final List<CastMember> cast;
 
-  /// The full description when available, otherwise the short summary.
   String get overview => description.isNotEmpty ? description : summary;
 }
 

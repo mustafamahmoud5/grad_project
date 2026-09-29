@@ -37,7 +37,6 @@ class CategoriesState extends PagedMoviesState {
   List<Object?> get props => [genre, ...super.props];
 }
 
-/// Browse tab: movies of the selected genre, most downloaded first.
 class CategoriesCubit extends Cubit<CategoriesState> {
   CategoriesCubit(this._repository) : super(const CategoriesState());
 

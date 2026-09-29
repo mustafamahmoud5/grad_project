@@ -1,9 +1,3 @@
-/// YTS API configuration.
-///
-/// `https://yts.lt/api/v2/` now answers with a 301 redirect (without CORS
-/// headers, which breaks Flutter Web). The API itself announces
-/// `movies-api.accel.li` as its new official base URL in every response, so
-/// the app talks to it directly. It serves the exact same YTS v2 API.
 abstract final class ApiConstants {
   static const baseUrl = 'https://movies-api.accel.li/api/v2/';
 
@@ -19,7 +13,6 @@ abstract final class ApiConstants {
   static const youtubeWatchUrl = 'https://www.youtube.com/watch?v=';
 }
 
-/// Values accepted by the `sort_by` query parameter of `list_movies.json`.
 enum MovieSort {
   dateAdded('date_added'),
   downloadCount('download_count'),

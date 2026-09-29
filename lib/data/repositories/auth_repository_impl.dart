@@ -78,9 +78,7 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<void> logout() async {
     try {
       await _remote.logout();
-    } catch (_) {
-      // Logging out locally must never fail from the user's point of view.
-    }
+    } catch (_) {}
   }
 
   Future<Result<T>> _guard<T>(Future<T> Function() action) async {

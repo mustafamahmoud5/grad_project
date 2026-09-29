@@ -4,8 +4,6 @@ import '../../domain/entities/movie.dart';
 import 'app_loading.dart';
 import 'movie_poster_card.dart';
 
-/// Responsive, infinitely scrolling poster grid. Columns grow with the screen
-/// width so posters are never stretched.
 class MovieGrid extends StatefulWidget {
   const MovieGrid({
     super.key,
@@ -98,7 +96,6 @@ class _MovieGridState extends State<MovieGrid> {
   );
 }
 
-/// Loading skeleton matching [MovieGrid].
 class MovieGridSkeleton extends StatelessWidget {
   const MovieGridSkeleton({super.key, this.maxPosterWidth = 190});
 

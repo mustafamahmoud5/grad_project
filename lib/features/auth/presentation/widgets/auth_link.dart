@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../app/theme/app_colors.dart';
 import '../../../../app/theme/app_text_styles.dart';
 
-/// "Don't Have Account ? Create One" style link.
 class AuthLink extends StatelessWidget {
   const AuthLink({
     super.key,

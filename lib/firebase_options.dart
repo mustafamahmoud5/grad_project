@@ -1,15 +1,3 @@
-// Firebase options for the existing "gradproject" Firebase project
-// (project id: gradproject-7f8d0).
-//
-// The iOS values below are copied from ios/Runner/GoogleService-Info.plist.
-// Android and Web are not configured yet. Run the following to regenerate this
-// file for every platform (it will overwrite this file):
-//
-//   flutterfire configure --project=gradproject-7f8d0 \
-//     --platforms=android,ios,web \
-//     --android-package-name=com.example.grad_project \
-//     --ios-bundle-id=com.example.gradProject
-// ignore_for_file: type=lint
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;

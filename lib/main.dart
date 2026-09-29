@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'app/app.dart';
 import 'injection_container.dart';
-  
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
-  // Firebase is initialized by the splash screen so the first frame is not
-  // blocked.
+
   runApp(const App());
 }

@@ -65,7 +65,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(repository.loginCalls, [('me@mail.com', 'secret1')]);
-      // Firebase errors are shown as friendly messages.
+
       expect(find.text('Email or password is incorrect.'), findsOneWidget);
     });
   });

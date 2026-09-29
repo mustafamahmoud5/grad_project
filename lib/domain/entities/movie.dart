@@ -20,7 +20,6 @@ class Movie extends Equatable {
   final int year;
   final double rating;
 
-  /// Runtime in minutes, 0 when unknown.
   final int runtime;
   final List<String> genres;
   final String summary;
@@ -28,10 +27,8 @@ class Movie extends Equatable {
   final String? largePosterUrl;
   final String? backgroundUrl;
 
-  /// Public YTS page of the movie.
   final String? url;
 
-  /// Best image for large headers.
   String? get heroImageUrl => largePosterUrl ?? posterUrl ?? backgroundUrl;
 
   @override

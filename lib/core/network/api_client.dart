@@ -4,10 +4,6 @@ import '../constants/api_constants.dart';
 import '../errors/exceptions.dart';
 
 abstract interface class ApiClient {
-  /// Performs a GET request and returns the decoded JSON object.
-  ///
-  /// Throws [NetworkException], [TimeoutException], [ServerException] or
-  /// [ParsingException].
   Future<Map<String, dynamic>> get(
     String path, {
     Map<String, dynamic>? queryParameters,

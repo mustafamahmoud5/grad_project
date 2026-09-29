@@ -1,5 +1,3 @@
-/// Defensive JSON readers. The YTS API sometimes omits fields or returns them
-/// with unexpected types, so every model goes through these helpers.
 abstract final class Helpers {
   static String? nullableString(Object? value) {
     if (value == null) return null;
@@ -36,7 +34,6 @@ abstract final class Helpers {
       ? value.whereType<Map>().map(Map<String, dynamic>.from).toList()
       : const [];
 
-  /// Returns a usable absolute http(s) URL or `null`.
   static String? url(Object? value) {
     final text = nullableString(value);
     if (text == null) return null;

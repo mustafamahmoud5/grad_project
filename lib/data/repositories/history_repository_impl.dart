@@ -6,7 +6,6 @@ import '../../domain/repositories/history_repository.dart';
 import '../datasources/local/local_data_source.dart';
 import '../models/movie_model.dart';
 
-/// History is kept on the device (per user) with SharedPreferences.
 class HistoryRepositoryImpl implements HistoryRepository {
   HistoryRepositoryImpl({
     required LocalDataSource localDataSource,
@@ -36,9 +35,7 @@ class HistoryRepositoryImpl implements HistoryRepository {
     try {
       await _local.saveHistory(userId, history);
       _changes.add(null);
-    } catch (_) {
-      // History is a convenience; failing to store it must not break the UI.
-    }
+    } catch (_) {}
   }
 
   List<Movie> _current() {

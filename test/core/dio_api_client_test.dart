@@ -6,8 +6,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:grad_project/core/errors/exceptions.dart';
 import 'package:grad_project/core/network/api_client.dart';
 
-/// Returns canned responses or throws canned errors instead of using the
-/// network.
 class _Adapter implements HttpClientAdapter {
   _Adapter(this.respond);
 

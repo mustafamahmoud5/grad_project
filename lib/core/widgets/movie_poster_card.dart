@@ -6,8 +6,6 @@ import '../../domain/entities/movie.dart';
 import 'app_network_image.dart';
 import 'app_shimmer.dart';
 
-/// Movie poster with the rating badge used across Home, Browse, Search and
-/// Profile. Posters always keep the 2:3 aspect ratio.
 class MoviePosterCard extends StatelessWidget {
   const MoviePosterCard({
     super.key,

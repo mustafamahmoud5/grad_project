@@ -109,9 +109,9 @@ void main() {
       expect(details.trailerCode, 'Y41fFj-P4jI');
       expect(details.overview, contains('Russian roulette'));
       expect(details.screenshots, hasLength(2));
-      // Large screenshots are preferred over medium ones.
+
       expect(details.screenshots.first, endsWith('large-screenshot1.jpg'));
-      // Cast members without a name are dropped.
+
       expect(details.cast, hasLength(1));
       expect(details.cast.single.name, 'Jason Statham');
       expect(details.cast.single.characterName, 'Jasper');

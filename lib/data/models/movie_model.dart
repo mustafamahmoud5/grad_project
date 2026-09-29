@@ -17,8 +17,6 @@ class MovieModel extends Movie {
     super.url,
   });
 
-  /// Parses a movie object from the YTS API (or one saved with [toJson]).
-  /// Missing or malformed fields fall back to safe defaults.
   factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
     id: Helpers.integer(json['id']),
     title: Helpers.string(
@@ -52,10 +50,8 @@ class MovieModel extends Movie {
     url: movie.url,
   );
 
-  /// A movie is usable only when it has an id and a title.
   bool get isValid => id > 0 && title.isNotEmpty;
 
-  /// Compact representation used for the watch list and history.
   Map<String, dynamic> toJson() => {
     'id': id,
     'title': title,
@@ -71,7 +67,6 @@ class MovieModel extends Movie {
 }
 
 abstract final class MoviePageModel {
-  /// Parses the `data` object of a `list_movies.json` response.
   static MoviePage fromJson(Map<String, dynamic> data, {required int page}) {
     final movies = Helpers.mapList(
       data['movies'],

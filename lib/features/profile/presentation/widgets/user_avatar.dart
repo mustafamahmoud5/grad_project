@@ -5,8 +5,6 @@ import '../../../../core/constants/asset_constants.dart';
 import '../../../../core/widgets/app_network_image.dart';
 import '../../../../domain/entities/user.dart';
 
-/// The user's picked avatar, or their Google photo when they have one and
-/// never picked an avatar.
 class UserAvatar extends StatelessWidget {
   const UserAvatar({
     super.key,

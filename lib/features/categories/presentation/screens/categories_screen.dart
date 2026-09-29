@@ -10,7 +10,6 @@ import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/movie_grid.dart';
 import '../cubit/categories_cubit.dart';
 
-/// "Browse" tab.
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 
@@ -57,7 +56,6 @@ class CategoriesScreen extends StatelessWidget {
   }
 }
 
-/// Horizontal list of genre chips. The selected chip is filled yellow.
 class GenreTabs extends StatefulWidget {
   const GenreTabs({
     super.key,
@@ -81,7 +79,6 @@ class _GenreTabsState extends State<GenreTabs> {
   void didUpdateWidget(covariant GenreTabs oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.selected != widget.selected) {
-      // Scroll the selected genre into view (e.g. after "See More").
       WidgetsBinding.instance.addPostFrameCallback((_) {
         final context = _keys[widget.selected]?.currentContext;
         if (context != null && context.mounted) {

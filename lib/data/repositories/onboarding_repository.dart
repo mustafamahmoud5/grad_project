@@ -10,8 +10,6 @@ class OnboardingRepository {
   Future<void> complete() async {
     try {
       await _local.completeOnboarding();
-    } catch (_) {
-      // Showing onboarding again is harmless.
-    }
+    } catch (_) {}
   }
 }

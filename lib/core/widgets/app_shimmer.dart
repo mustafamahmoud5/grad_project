@@ -16,7 +16,6 @@ class AppShimmer extends StatelessWidget {
   );
 }
 
-/// Grey rounded block used to build loading skeletons.
 class ShimmerBox extends StatelessWidget {
   const ShimmerBox({super.key, this.width, this.height, this.radius = 16});
 

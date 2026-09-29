@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_text_styles.dart';
 
-/// Empty state: the popcorn/movie icon from the design with a short message.
 class AppEmpty extends StatelessWidget {
   const AppEmpty({
     super.key,

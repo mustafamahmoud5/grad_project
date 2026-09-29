@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/responsive_center.dart';
 
-/// Scrollable, keyboard-safe layout shared by the auth screens.
 class AuthScaffold extends StatelessWidget {
   const AuthScaffold({super.key, required this.child, this.title});
 

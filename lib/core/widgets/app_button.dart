@@ -4,7 +4,6 @@ import '../../app/theme/app_colors.dart';
 
 enum AppButtonVariant { primary, danger, outlined }
 
-/// Full width button from the design with a built-in loading state.
 class AppButton extends StatelessWidget {
   const AppButton({
     super.key,

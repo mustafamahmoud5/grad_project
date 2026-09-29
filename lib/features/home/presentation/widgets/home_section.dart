@@ -7,7 +7,6 @@ import '../../../../core/widgets/app_shimmer.dart';
 import '../../../../core/widgets/movie_poster_card.dart';
 import '../cubit/home_cubit.dart';
 
-/// Genre row: "Action ........ See More ->" with a horizontal poster list.
 class HomeSectionView extends StatelessWidget {
   const HomeSectionView({
     super.key,

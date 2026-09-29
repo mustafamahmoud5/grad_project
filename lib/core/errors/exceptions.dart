@@ -1,5 +1,3 @@
-/// Exceptions thrown by the data layer. Repositories convert them into
-/// [Failure]s so the UI never sees raw technical errors.
 class ServerException implements Exception {
   const ServerException([this.message = 'A server error occurred.']);
 

@@ -1,6 +1,5 @@
 import '../errors/failures.dart';
 
-/// Either a [Success] value or a [Failed] failure.
 sealed class Result<T> {
   const Result();
 

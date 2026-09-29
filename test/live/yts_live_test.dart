@@ -13,7 +13,6 @@ import 'package:grad_project/domain/entities/movie_page.dart';
 
 import '../helpers/fakes.dart';
 
-/// End-to-end check of the real YTS API through the app's own data layer.
 void main() {
   final repository = MovieRepositoryImpl(
     remoteDataSource: YtsMovieRemoteDataSource(DioApiClient()),

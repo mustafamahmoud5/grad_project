@@ -2,7 +2,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../data/repositories/onboarding_repository.dart';
 
-/// Holds the current onboarding page index.
 class OnboardingCubit extends Cubit<int> {
   OnboardingCubit({
     required OnboardingRepository repository,

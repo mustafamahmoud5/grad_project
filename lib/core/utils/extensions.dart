@@ -4,7 +4,6 @@ extension StringExtensions on String {
 }
 
 extension RuntimeFormat on int {
-  /// Formats minutes like `2h 15m`. Returns an empty string for 0.
   String get asRuntime {
     if (this <= 0) return '';
     final hours = this ~/ 60;

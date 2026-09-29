@@ -3,8 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../../core/errors/exceptions.dart';
 import '../../models/movie_model.dart';
 
-/// Stores the watch list in Firestore at `users/{uid}/watchlist/{movieId}`,
-/// so it follows the user across devices and survives app restarts.
 abstract interface class FavoritesRemoteDataSource {
   Stream<List<MovieModel>> watchFavorites(String userId);
   Future<bool> isFavorite(String userId, int movieId);

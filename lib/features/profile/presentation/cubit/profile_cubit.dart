@@ -100,7 +100,6 @@ class ProfileCubit extends Cubit<ProfileState> {
     );
   }
 
-  /// Applies profile changes made on the Edit Profile screen.
   void updateUser(AppUser user) =>
       emit(state.copyWith(status: ProfileStatus.success, user: user));
 

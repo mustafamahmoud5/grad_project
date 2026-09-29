@@ -2,14 +2,10 @@ import '../../core/utils/result.dart';
 import '../entities/user.dart';
 
 abstract interface class AuthRepository {
-  /// Whether Firebase is available on this platform/build.
   bool get isAvailable;
 
-  /// The id of the signed-in user, or `null`.
   String? get currentUserId;
 
-  /// Waits for Firebase to restore a persisted session and returns the
-  /// signed-in user's id, or `null`.
   Future<String?> restoreSession();
 
   Future<Result<AppUser>> login({

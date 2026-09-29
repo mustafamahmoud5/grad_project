@@ -33,7 +33,6 @@ abstract final class Validators {
     return value == password ? null : 'Passwords do not match';
   }
 
-  /// Phone is optional; when present it must look like a phone number.
   static String? optionalPhone(String? value) {
     final text = value?.trim() ?? '';
     if (text.isEmpty) return null;

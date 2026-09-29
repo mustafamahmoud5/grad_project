@@ -41,7 +41,7 @@ void main() {
       ),
     );
     await tester.pump();
-    // An empty watch list, as Firestore would deliver it.
+
     favorites.emitFavorites();
     await tester.pump();
     return auth;
@@ -71,8 +71,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.widgetWithText(TextButton, 'Exit'));
     await tester.pumpAndSettle();
-    // Logout cancels the live watch list / history streams first; let those
-    // cancellations complete on the real event loop.
+
     await tester.runAsync(
       () => Future<void>.delayed(const Duration(milliseconds: 50)),
     );

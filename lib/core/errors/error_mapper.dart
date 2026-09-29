@@ -4,7 +4,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'exceptions.dart';
 import 'failures.dart';
 
-/// Converts any thrown error into a [Failure] with a user-friendly message.
 abstract final class ErrorMapper {
   static Failure toFailure(Object error) => switch (error) {
     NetworkException() => const NetworkFailure(),

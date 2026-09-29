@@ -13,7 +13,6 @@ class AuthState extends Equatable {
   final AuthStatus status;
   final AppUser? user;
 
-  /// User-friendly message for [AuthStatus.failure].
   final String? message;
 
   bool get isLoading => status == AuthStatus.loading;
@@ -22,7 +21,6 @@ class AuthState extends Equatable {
   List<Object?> get props => [status, user, message];
 }
 
-/// Handles the login, register, Google and password reset forms.
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this._repository) : super(const AuthState());
 

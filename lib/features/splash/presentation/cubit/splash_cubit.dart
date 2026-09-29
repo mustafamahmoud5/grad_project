@@ -23,8 +23,6 @@ class SplashCubit extends Cubit<SplashState> {
   Future<void> start() async {
     final minimumDelay = Future<void>.delayed(minimumDuration);
 
-    // Initialization errors are handled inside FirebaseService: the app keeps
-    // running and the auth screens explain the problem.
     await _initializeFirebase();
     final userId = await _auth.restoreSession();
     await minimumDelay;

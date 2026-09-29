@@ -144,7 +144,7 @@ void main() {
 
       expect(cubit.state.status, HomeStatus.success);
       expect(cubit.state.availableNow, hasLength(4));
-      // The failing genre is skipped instead of failing the whole screen.
+
       expect(cubit.state.sections.map((section) => section.genre), [
         'Action',
         'Adventure',

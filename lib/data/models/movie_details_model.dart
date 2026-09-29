@@ -24,7 +24,6 @@ class MovieDetailsModel extends MovieDetails {
     super.cast,
   });
 
-  /// Parses the `data.movie` object of a `movie_details.json` response.
   factory MovieDetailsModel.fromJson(Map<String, dynamic> json) {
     final base = MovieModel.fromJson(json);
     return MovieDetailsModel(

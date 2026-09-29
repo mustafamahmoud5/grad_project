@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-/// User-facing failures returned by repositories. [message] is always safe to
-/// show in the UI.
 sealed class Failure extends Equatable {
   const Failure(this.message);
 

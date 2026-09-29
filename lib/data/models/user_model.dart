@@ -11,8 +11,6 @@ class UserModel extends AppUser {
     super.photoUrl,
   });
 
-  /// Builds the user from its Firestore profile document, falling back to the
-  /// Firebase Auth values when the document is missing fields.
   factory UserModel.fromFirestore(
     Map<String, dynamic>? data, {
     required String id,

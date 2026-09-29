@@ -40,8 +40,6 @@ abstract interface class AuthRemoteDataSource {
   Future<void> logout();
 }
 
-/// Firebase Authentication + a Firestore `users/{uid}` profile document that
-/// stores the fields Firebase Auth cannot (phone, avatar).
 class FirebaseAuthRemoteDataSource implements AuthRemoteDataSource {
   FirebaseAuth get _auth => FirebaseAuth.instance;
   FirebaseFirestore get _firestore => FirebaseFirestore.instance;
@@ -107,8 +105,6 @@ class FirebaseAuthRemoteDataSource implements AuthRemoteDataSource {
     try {
       await _profile(user.uid).set(profile.toFirestore());
     } catch (error) {
-      // The account exists at this point; a profile write failure must not
-      // turn a successful registration into an error.
       debugPrint('Could not save user profile: $error');
     }
     return profile;
@@ -226,7 +222,6 @@ class FirebaseAuthRemoteDataSource implements AuthRemoteDataSource {
     try {
       data = (await _profile(user.uid).get()).data();
     } catch (error) {
-      // Fall back to Firebase Auth values when the profile is unavailable.
       debugPrint('Could not load user profile: $error');
     }
     return UserModel.fromFirestore(

@@ -21,7 +21,6 @@ class SectionTitle extends StatelessWidget {
   );
 }
 
-/// Likes, runtime and rating chips.
 class MovieStats extends StatelessWidget {
   const MovieStats({super.key, required this.movie});
 

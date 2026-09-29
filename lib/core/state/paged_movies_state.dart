@@ -4,7 +4,6 @@ import '../../domain/entities/movie.dart';
 
 enum ListStatus { initial, loading, success, empty, failure }
 
-/// State for any paginated movie list (Search, Browse).
 class PagedMoviesState extends Equatable {
   const PagedMoviesState({
     this.status = ListStatus.initial,
@@ -22,10 +21,8 @@ class PagedMoviesState extends Equatable {
   final bool hasMore;
   final bool isLoadingMore;
 
-  /// Error of the first page (full screen error).
   final String? errorMessage;
 
-  /// Error while loading a following page (inline retry).
   final String? loadMoreError;
 
   PagedMoviesState copyWith({

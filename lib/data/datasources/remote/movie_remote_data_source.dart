@@ -64,7 +64,7 @@ class YtsMovieRemoteDataSource implements MovieRemoteDataSource {
     final movie = Helpers.map(_data(json)['movie']);
     if (movie == null) throw const ParsingException();
     final details = MovieDetailsModel.fromJson(movie);
-    // YTS answers unknown ids with an empty movie object.
+
     if (!details.isValid) throw const ServerException('Movie not found.');
     return details;
   }

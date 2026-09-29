@@ -2,7 +2,6 @@ import 'package:equatable/equatable.dart';
 
 import 'movie.dart';
 
-/// One page of results from a paginated movie query.
 class MoviePage extends Equatable {
   const MoviePage({
     required this.movies,

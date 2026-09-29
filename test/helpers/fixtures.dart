@@ -1,4 +1,3 @@
-/// JSON fixtures mirroring real YTS API v2 responses.
 Map<String, dynamic> movieJson({
   int id = 10,
   String title = '13',

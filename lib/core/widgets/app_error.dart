@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_text_styles.dart';
 
-/// Friendly error state with an optional retry button.
 class AppError extends StatelessWidget {
   const AppError({
     super.key,

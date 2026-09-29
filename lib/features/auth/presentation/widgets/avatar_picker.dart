@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../app/theme/app_colors.dart';
 import '../../../../core/constants/asset_constants.dart';
 
-/// Horizontal avatar carousel from the Register design. The centered avatar
-/// is the selected one.
 class AvatarCarousel extends StatefulWidget {
   const AvatarCarousel({
     super.key,
@@ -64,7 +62,6 @@ class _AvatarCarouselState extends State<AvatarCarousel> {
   );
 }
 
-/// Bottom sheet grid used by Edit Profile to pick an avatar.
 Future<int?> showAvatarPicker(BuildContext context, int selectedIndex) =>
     showModalBottomSheet<int>(
       context: context,

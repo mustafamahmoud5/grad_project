@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_text_styles.dart';
 
-/// Text field styled like the design, with validation and a password
-/// visibility toggle.
 class AppTextField extends StatefulWidget {
   const AppTextField({
     super.key,

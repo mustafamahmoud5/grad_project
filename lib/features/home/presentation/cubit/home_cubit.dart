@@ -32,13 +32,10 @@ class HomeState extends Equatable {
 
   final HomeStatus status;
 
-  /// Latest movies shown in the "Available Now" carousel.
   final List<Movie> availableNow;
 
-  /// Popular movies per genre.
   final List<HomeSection> sections;
 
-  /// Index of the centered carousel movie (drives the blurred background).
   final int selectedIndex;
   final String? errorMessage;
 

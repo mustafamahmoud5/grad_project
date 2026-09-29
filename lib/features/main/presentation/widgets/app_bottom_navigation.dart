@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../app/theme/app_colors.dart';
 
-/// Floating bottom navigation bar from the design.
 class AppBottomNavigation extends StatelessWidget {
   const AppBottomNavigation({
     super.key,

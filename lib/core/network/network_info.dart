@@ -16,7 +16,6 @@ class ConnectivityNetworkInfo implements NetworkInfo {
       final results = await _connectivity.checkConnectivity();
       return results.any((result) => result != ConnectivityResult.none);
     } catch (_) {
-      // If the platform cannot tell us, let the request decide.
       return true;
     }
   }

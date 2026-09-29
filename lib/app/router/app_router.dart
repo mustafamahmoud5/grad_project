@@ -22,11 +22,8 @@ abstract final class AppRouter {
   static const String movieDetails = '/movie-details';
   static const String editProfile = '/edit-profile';
 
-  /// Routes that require a signed-in user.
   static const _protected = {home, movieDetails, editProfile};
 
-  /// The app always starts on the splash screen, even when the web URL points
-  /// somewhere else, so Firebase is initialized before any other screen.
   static List<Route<dynamic>> onGenerateInitialRoutes(String initialRoute) => [
     _page(const RouteSettings(name: splash), const SplashScreen()),
   ];
@@ -67,8 +64,6 @@ abstract final class AppRouter {
     RouteSettings settings,
     Widget screen,
   ) => MaterialPageRoute<dynamic>(settings: settings, builder: (_) => screen);
-
-  // Navigation helpers used by the screens.
 
   static Future<void> openMovie(BuildContext context, Movie movie) =>
       Navigator.of(context).pushNamed(movieDetails, arguments: movie);

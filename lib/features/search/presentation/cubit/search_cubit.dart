@@ -47,7 +47,6 @@ class SearchCubit extends Cubit<SearchState> {
   final MovieRepository _repository;
   final Debouncer _debouncer;
 
-  /// Called on every keystroke; the request is sent once typing pauses.
   void queryChanged(String value) {
     final query = value.trim();
     if (query == state.query && state.status != ListStatus.failure) return;
@@ -60,7 +59,6 @@ class SearchCubit extends Cubit<SearchState> {
     _debouncer.run(() => _search(query));
   }
 
-  /// Runs the current query immediately (keyboard "search" / retry).
   void submit() {
     if (state.query.isEmpty) return;
     _debouncer.cancel();
@@ -75,7 +73,7 @@ class SearchCubit extends Cubit<SearchState> {
   Future<void> _search(String query) async {
     emit(SearchState(query: query, status: ListStatus.loading));
     final result = await _repository.searchMovies(query);
-    // Ignore responses for a query the user has already changed.
+
     if (isClosed || state.query != query) return;
     switch (result) {
       case Success<MoviePage>(:final data):

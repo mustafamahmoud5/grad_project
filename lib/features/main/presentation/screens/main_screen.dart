@@ -14,9 +14,6 @@ import '../widgets/app_bottom_navigation.dart';
 
 enum MainTab { home, search, browse, profile }
 
-/// Hosts the four bottom navigation tabs. Tabs are built the first time they
-/// are opened and then kept alive so scroll position and results survive
-/// switching tabs.
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key, this.initialTab = MainTab.home});
 

@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import '../../app/theme/app_colors.dart';
 import 'app_shimmer.dart';
 
-/// Network image with a shimmer placeholder, a graceful fallback for missing
-/// or broken images and disk caching on mobile.
 class AppNetworkImage extends StatelessWidget {
   const AppNetworkImage({
     super.key,
@@ -25,8 +23,6 @@ class AppNetworkImage extends StatelessWidget {
   final BorderRadius borderRadius;
   final IconData fallbackIcon;
 
-  /// Disk caching relies on platform plugins that do not exist in widget
-  /// tests. Tests switch this off to use a plain [Image.network].
   @visibleForTesting
   static bool useDiskCache = true;
 
@@ -42,7 +38,7 @@ class AppNetworkImage extends StatelessWidget {
         width: width,
         height: height,
         fit: fit,
-        // Lets the browser render posters from hosts without CORS headers.
+
         webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
         loadingBuilder: (context, child, progress) =>
             progress == null ? child : _placeholder(),

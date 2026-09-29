@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 
-/// Runs an action only after [delay] has passed without another call.
 class Debouncer {
   Debouncer(this.delay);
 

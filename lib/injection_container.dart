@@ -20,22 +20,17 @@ import 'domain/repositories/movie_repository.dart';
 
 final getIt = GetIt.instance;
 
-/// Registers every dependency. Firebase-backed objects are lazy, so nothing
-/// touches Firebase before [FirebaseService.initialize] has run on the splash
-/// screen.
 Future<void> configureDependencies() async {
   if (getIt.isRegistered<MovieRepository>()) return;
 
   final preferences = await SharedPreferences.getInstance();
 
-  // Core
   getIt
     ..registerLazySingleton<ApiClient>(DioApiClient.new)
     ..registerLazySingleton<NetworkInfo>(ConnectivityNetworkInfo.new)
     ..registerLazySingleton<LocalStorageService>(
       () => SharedPreferencesStorage(preferences),
     )
-    // Data sources
     ..registerLazySingleton<MovieRemoteDataSource>(
       () => YtsMovieRemoteDataSource(getIt()),
     )
@@ -46,7 +41,6 @@ Future<void> configureDependencies() async {
       FirestoreFavoritesDataSource.new,
     )
     ..registerLazySingleton<LocalDataSource>(() => LocalDataSourceImpl(getIt()))
-    // Repositories
     ..registerLazySingleton<MovieRepository>(
       () =>
           MovieRepositoryImpl(remoteDataSource: getIt(), networkInfo: getIt()),

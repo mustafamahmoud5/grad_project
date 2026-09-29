@@ -22,7 +22,6 @@ class MovieDetailsState extends Equatable {
     this.message,
   });
 
-  /// Data already known from the list the user tapped, shown immediately.
   final Movie preview;
   final DetailsStatus status;
   final MovieDetails? details;
@@ -31,7 +30,6 @@ class MovieDetailsState extends Equatable {
   final bool isFavoriteBusy;
   final String? errorMessage;
 
-  /// One-off feedback shown in a snack bar.
   final String? message;
 
   Movie get movie => details ?? preview;
@@ -123,7 +121,7 @@ class MovieDetailsCubit extends Cubit<MovieDetailsState> {
   Future<void> toggleFavorite() async {
     if (state.isFavoriteBusy) return;
     final wasFavorite = state.isFavorite;
-    // Optimistic update so the bookmark reacts instantly.
+
     emit(state.copyWith(isFavorite: !wasFavorite, isFavoriteBusy: true));
     final result = wasFavorite
         ? await _favorites.removeFavorite(_id)
